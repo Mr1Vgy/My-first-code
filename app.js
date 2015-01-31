@@ -8,9 +8,9 @@ app.get('/', function (req, res) {
 })
 app.use(express.static(__dirname + '/public'));
 
-app.get('/help', function (req, res) {
-  res.send('<title>Help Page</title> <b>This is the help page.</b> <body> <p>Help is on the way...</p> <img src="http://t7.rbxcdn.com/fb73087d71531d3a273e14aeab5c306f" /> </body>')
-})
+//app.get('/help', function (req, res) {
+  //res.send('<title>Help Page</title> <b>This is the help page.</b> <body> <p>Help is on the way...</p> <img //src="http://t7.rbxcdn.com/fb73087d71531d3a273e14aeab5c306f" /> </body>')
+//})
 
 var server = app.listen(3000, function () {
 
