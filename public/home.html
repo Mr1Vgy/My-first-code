@@ -57,15 +57,10 @@ $('#helpLink').click(function() {
 
 <script>
 $('#createAccount').click(function() {
-var pass=$('#userPasswordCreate').val();
-var confirmPass=$('#userPasswordCreateConfirm').val();
-if (pass == confirmPass)
-{ alert("passwords match")}
-else
-{ alert('dont match')}
+var username=$('#userNameCreate').val();
+window.location.href='/createAccount.html?username='+username
 });
 </script>
-
 
 </body>
 
