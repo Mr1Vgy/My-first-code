@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <title>Home</title>
+
 <h1>Welcome!</h1>
 
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
 <body>
 <h2>Log in or make an account</h2>
 
-<input type = "text" id = "userName" value = "User Name"></input>
-<input type = "text" id = "userPassword" value = "Password"></input>
+<input type = "text" id = "userName" placeholder = "User Name"></input>
+
+<input type = "password" id = "userPassword" placeholder = "Password"></input>
 <button id = "logIn">Log In</button>
 
 <p id = "para"></p>
+<h2>OR make an account</h2>
 
+<body>
+
+<input type = "text" id = "userNameCreate" placeholder = "Your User Name"></input>
+
+<input type = "password" id = "userPasswordCreate" placeholder = "Your Password"></input></p>
+<input type = "password" id = "userPasswordCreateConfirm" placeholder = "Confirm Your Password"></input>
+<button id = "createAccount">Create Account</button>
+
+<p id = "para"></p>
 <button onclick="myFunction()">Click Here For Help</button>
 <script>
 function myFunction() {
-	document.getElementById("para").innerHTML = "If you can't log in, it means you didn't enter the right username or password. Try going to the help page.";
+	document.getElementById("para").innerHTML = "If you can't log in, it means you didn't enter the right username or password, or you don't have an account. Try going to the help page.";
 }
 </script>
+
 
 <script>
 $('#logIn').click(function() {
 	var name=$('#userName').val()
-	alert("Unable to log in as "+name);
+	alert('The account "'+name+'" does not exist');
 });
 </script>
 
+
 <button id="helpLink">Go To Help Page</button>
+
 
 <script>
 $('#helpLink').click(function() {
@@ -36,5 +54,19 @@ $('#helpLink').click(function() {
 });
 </script>
 
+
+<script>
+$('#createAccount').click(function() {
+var pass=$('#userPasswordCreate').val();
+var confirmPass=$('#userPasswordCreateConfirm').val();
+if (pass == confirmPass)
+{ alert("passwords match")}
+else
+{ alert('dont match')}
+});
+</script>
+
+
 </body>
+
 </html>
